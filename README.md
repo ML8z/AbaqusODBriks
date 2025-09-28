@@ -5,7 +5,8 @@
 ## 安装
 
 1. 将 `plugins/extract_r1_history.py` 复制到 Abaqus 插件目录（例如 `CAE/plugins`）或其它可被 Abaqus 插件搜索路径访问的位置。
-2. 重新启动 Abaqus/CAE，或在插件管理器中加载该脚本。
+2. 该脚本依赖 Abaqus/CAE 的 GUI 环境，仅能在 Abaqus/CAE 中加载与运行；使用系统 Python 直接执行会提示错误信息。
+3. 重新启动 Abaqus/CAE，或在插件管理器中加载该脚本。
 
 ## 使用方法
 
