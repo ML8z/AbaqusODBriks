@@ -52,6 +52,7 @@ def _safe_makedirs(path):
         os.makedirs(path)
 
 
+if _abaqus_modules_available():
     class ExtractR1HistoryForm(AFXForm):
         """Plugin form that coordinates the dialog and extraction logic."""
 
@@ -212,7 +213,8 @@ def _safe_makedirs(path):
         )
 
 
-    register_plugin()
+    if __name__ == "__main__":
+        register_plugin()
 else:
     def register_plugin():
         raise RuntimeError(u"该插件只能在 Abaqus/CAE GUI 中使用。")
